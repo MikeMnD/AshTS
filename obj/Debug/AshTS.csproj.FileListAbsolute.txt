@@ -1,0 +1,5 @@
+D:\xampp\htdocs\AshTS\AshTS\bin\AshTS.dll
+D:\xampp\htdocs\AshTS\AshTS\bin\AshTS.pdb
+D:\xampp\htdocs\AshTS\AshTS\obj\Debug\AshTS.csprojResolveAssemblyReference.cache
+D:\xampp\htdocs\AshTS\AshTS\obj\Debug\AshTS.dll
+D:\xampp\htdocs\AshTS\AshTS\obj\Debug\AshTS.pdb

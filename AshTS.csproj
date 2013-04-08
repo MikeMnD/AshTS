@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{6E25F2C7-13D9-4EB2-9A9D-C62F0C4F71D4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="App.js">
+      <DependentUpon>App.ts</DependentUpon>
+    </Content>
+    <Content Include="App.min.js">
+      <DependentUpon>App.ts</DependentUpon>
+    </Content>
+    <Content Include="App.ts" />
+    <Content Include="core\ComponentMatchingFamily.js">
+      <DependentUpon>ComponentMatchingFamily.ts</DependentUpon>
+    </Content>
+    <Content Include="core\ComponentMatchingFamily.min.js">
+      <DependentUpon>ComponentMatchingFamily.ts</DependentUpon>
+    </Content>
+    <Content Include="core\ComponentMatchingFamily.ts" />
+    <Content Include="core\Engine.js">
+      <DependentUpon>Engine.ts</DependentUpon>
+    </Content>
+    <Content Include="core\Engine.min.js">
+      <DependentUpon>Engine.ts</DependentUpon>
+    </Content>
+    <Content Include="core\Engine.ts" />
+    <Content Include="core\Entity.js">
+      <DependentUpon>Entity.ts</DependentUpon>
+    </Content>
+    <Content Include="core\Entity.min.js">
+      <DependentUpon>Entity.ts</DependentUpon>
+    </Content>
+    <Content Include="core\Entity.ts" />
+    <Content Include="core\EntityList.js">
+      <DependentUpon>EntityList.ts</DependentUpon>
+    </Content>
+    <Content Include="core\EntityList.min.js">
+      <DependentUpon>EntityList.ts</DependentUpon>
+    </Content>
+    <Content Include="core\EntityList.ts" />
+    <Content Include="core\IFamily.js">
+      <DependentUpon>IFamily.ts</DependentUpon>
+    </Content>
+    <Content Include="core\IFamily.min.js">
+      <DependentUpon>IFamily.ts</DependentUpon>
+    </Content>
+    <Content Include="core\IFamily.ts" />
+    <Content Include="core\Node.js">
+      <DependentUpon>Node.ts</DependentUpon>
+    </Content>
+    <Content Include="core\Node.min.js">
+      <DependentUpon>Node.ts</DependentUpon>
+    </Content>
+    <Content Include="core\Node.ts" />
+    <Content Include="core\NodeList.js">
+      <DependentUpon>NodeList.ts</DependentUpon>
+    </Content>
+    <Content Include="core\NodeList.min.js">
+      <DependentUpon>NodeList.ts</DependentUpon>
+    </Content>
+    <Content Include="core\NodeList.ts" />
+    <Content Include="core\NodePool.js">
+      <DependentUpon>NodePool.ts</DependentUpon>
+    </Content>
+    <Content Include="core\NodePool.min.js">
+      <DependentUpon>NodePool.ts</DependentUpon>
+    </Content>
+    <Content Include="core\NodePool.ts" />
+    <Content Include="core\System.js">
+      <DependentUpon>System.ts</DependentUpon>
+    </Content>
+    <Content Include="core\System.min.js">
+      <DependentUpon>System.ts</DependentUpon>
+    </Content>
+    <Content Include="core\System.ts" />
+    <Content Include="core\SystemList.js">
+      <DependentUpon>SystemList.ts</DependentUpon>
+    </Content>
+    <Content Include="core\SystemList.min.js">
+      <DependentUpon>SystemList.ts</DependentUpon>
+    </Content>
+    <Content Include="core\SystemList.ts" />
+    <Content Include="game\Asteroids.js">
+      <DependentUpon>Asteroids.ts</DependentUpon>
+    </Content>
+    <Content Include="game\Asteroids.min.js">
+      <DependentUpon>Asteroids.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\asteroid.js">
+      <DependentUpon>Asteroid.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\asteroid.min.js">
+      <DependentUpon>Asteroid.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\bullet.js">
+      <DependentUpon>Bullet.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\bullet.min.js">
+      <DependentUpon>Bullet.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\display.js">
+      <DependentUpon>Display.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\display.min.js">
+      <DependentUpon>Display.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\gamestate.js">
+      <DependentUpon>Gamestate.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\gamestate.min.js">
+      <DependentUpon>Gamestate.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\gun.js">
+      <DependentUpon>Gun.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\gun.min.js">
+      <DependentUpon>Gun.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\guncontrols.js">
+      <DependentUpon>Guncontrols.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\guncontrols.min.js">
+      <DependentUpon>Guncontrols.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\motion.js">
+      <DependentUpon>Motion.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\motion.min.js">
+      <DependentUpon>Motion.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\motioncontrols.js">
+      <DependentUpon>Motioncontrols.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\motioncontrols.min.js">
+      <DependentUpon>Motioncontrols.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\position.js">
+      <DependentUpon>Position.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\position.min.js">
+      <DependentUpon>Position.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\spaceship.js">
+      <DependentUpon>Spaceship.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\spaceship.min.js">
+      <DependentUpon>Spaceship.ts</DependentUpon>
+    </Content>
+    <Content Include="game\EntityCreator.js">
+      <DependentUpon>EntityCreator.ts</DependentUpon>
+    </Content>
+    <Content Include="game\EntityCreator.min.js">
+      <DependentUpon>EntityCreator.ts</DependentUpon>
+    </Content>
+    <Content Include="game\graphics\asteroidview.js">
+      <DependentUpon>AsteroidView.ts</DependentUpon>
+    </Content>
+    <Content Include="game\graphics\asteroidview.min.js">
+      <DependentUpon>AsteroidView.ts</DependentUpon>
+    </Content>
+    <Content Include="game\graphics\bulletview.js">
+      <DependentUpon>BulletView.ts</DependentUpon>
+    </Content>
+    <Content Include="game\graphics\bulletview.min.js">
+      <DependentUpon>BulletView.ts</DependentUpon>
+    </Content>
+    <Content Include="game\graphics\spaceshipview.js">
+      <DependentUpon>SpaceshipView.ts</DependentUpon>
+    </Content>
+    <Content Include="game\graphics\spaceshipview.min.js">
+      <DependentUpon>SpaceshipView.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\asteroidcollision.js">
+      <DependentUpon>AsteroidCollision.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\asteroidcollision.min.js">
+      <DependentUpon>AsteroidCollision.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\bulletage.js">
+      <DependentUpon>BulletAge.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\bulletage.min.js">
+      <DependentUpon>BulletAge.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\bulletcollision.js">
+      <DependentUpon>BulletCollision.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\bulletcollision.min.js">
+      <DependentUpon>BulletCollision.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\guncontrol.js">
+      <DependentUpon>GunControl.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\guncontrol.min.js">
+      <DependentUpon>GunControl.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\motioncontrol.js">
+      <DependentUpon>MotionControl.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\motioncontrol.min.js">
+      <DependentUpon>MotionControl.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\movement.js">
+      <DependentUpon>Movement.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\movement.min.js">
+      <DependentUpon>Movement.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\render.js">
+      <DependentUpon>Render.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\render.min.js">
+      <DependentUpon>Render.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\spaceshipcollision.js">
+      <DependentUpon>SpaceshipCollision.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\spaceshipcollision.min.js">
+      <DependentUpon>SpaceshipCollision.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\BulletAgeSystem.js">
+      <DependentUpon>BulletAgeSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\bulletagesystem.min.js">
+      <DependentUpon>BulletAgeSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\CollisionSystem.js">
+      <DependentUpon>CollisionSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\collisionsystem.min.js">
+      <DependentUpon>CollisionSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\GameManager.js">
+      <DependentUpon>GameManager.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\gamemanager.min.js">
+      <DependentUpon>GameManager.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\GunControlSystem.js">
+      <DependentUpon>GunControlSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\guncontrolsystem.min.js">
+      <DependentUpon>GunControlSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\motioncontrolsystem.js">
+      <DependentUpon>MotionControlSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\motioncontrolsystem.min.js">
+      <DependentUpon>MotionControlSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\MovementSystem.js">
+      <DependentUpon>MovementSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\movementsystem.min.js">
+      <DependentUpon>MovementSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\RenderSystem.js">
+      <DependentUpon>RenderSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\rendersystem.min.js">
+      <DependentUpon>RenderSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\SystemPriorities.js">
+      <DependentUpon>SystemPriorities.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\systempriorities.min.js">
+      <DependentUpon>SystemPriorities.ts</DependentUpon>
+    </Content>
+    <Content Include="index.htm" />
+    <Content Include="game\Asteroids.ts" />
+    <Content Include="game\components\Asteroid.ts" />
+    <Content Include="game\components\Bullet.ts" />
+    <Content Include="game\components\Display.ts" />
+    <Content Include="game\components\Gamestate.ts" />
+    <Content Include="game\components\Gun.ts" />
+    <Content Include="game\components\Guncontrols.ts" />
+    <Content Include="game\components\Motion.ts" />
+    <Content Include="game\components\Motioncontrols.ts" />
+    <Content Include="game\components\Position.ts" />
+    <Content Include="game\components\Spaceship.ts" />
+    <Content Include="game\EntityCreator.ts" />
+    <Content Include="game\graphics\AsteroidView.ts" />
+    <Content Include="game\graphics\BulletView.ts" />
+    <Content Include="game\graphics\SpaceshipView.ts" />
+    <Content Include="game\nodes\AsteroidCollision.ts" />
+    <Content Include="game\nodes\BulletAge.ts" />
+    <Content Include="game\nodes\BulletCollision.ts" />
+    <Content Include="game\nodes\GunControl.ts" />
+    <Content Include="game\nodes\MotionControl.ts" />
+    <Content Include="game\nodes\Movement.ts" />
+    <Content Include="game\nodes\Render.ts" />
+    <Content Include="game\nodes\SpaceshipCollision.ts" />
+    <Content Include="game\systems\BulletAgeSystem.ts" />
+    <Content Include="game\systems\CollisionSystem.ts" />
+    <Content Include="game\systems\GameManager.ts" />
+    <Content Include="game\systems\GunControlSystem.ts" />
+    <Content Include="game\systems\MotionControlSystem.ts" />
+    <Content Include="game\systems\MovementSystem.ts" />
+    <Content Include="game\systems\RenderSystem.ts" />
+    <Content Include="game\systems\SystemPriorities.ts" />
+    <Content Include="Scripts\libs\dat.gui\dat.color.js" />
+    <Content Include="Scripts\libs\dat.gui\dat.color.min.js" />
+    <Content Include="Scripts\libs\dat.gui\dat.gui.d.ts" />
+    <Content Include="Scripts\libs\dat.gui\dat.gui.js" />
+    <Content Include="Scripts\libs\dat.gui\dat.gui.min.js" />
+    <Content Include="Scripts\libs\domReady.js" />
+    <Content Include="Scripts\libs\easeljs.d.ts" />
+    <Content Include="Scripts\libs\easeljs.js" />
+    <Content Include="Scripts\libs\jquery\dat.gui.d.ts" />
+    <Content Include="Scripts\libs\jquery\jquery-1.9.1.js" />
+    <Content Include="Scripts\libs\jquery\jquery-int.d.ts" />
+    <Content Include="Scripts\libs\jquery\jquery.d.ts" />
+    <Content Include="Scripts\libs\jquery\jquery.js" />
+    <Content Include="Scripts\libs\require.js" />
+    <Content Include="Scripts\libs\signals.js" />
+    <Content Include="Scripts\libs\signals.min.js" />
+    <Content Include="Scripts\libs\tweenjs-0.4.0.min.js" />
+    <Content Include="Scripts\libs\underscore.js" />
+    <Content Include="Scripts\typings\dat.gui.d.ts" />
+    <Content Include="Scripts\typings\easeljs\easeljs.d.ts" />
+    <Content Include="Scripts\typings\jquery-int.d.ts" />
+    <Content Include="Scripts\typings\jquery.d.ts" />
+    <Content Include="Scripts\typings\lib.d.ts" />
+    <Content Include="Scripts\typings\node.d.ts" />
+    <Content Include="Scripts\typings\require.d.ts" />
+    <Content Include="Scripts\typings\signal.d.ts" />
+    <Content Include="Scripts\typings\tweenjs\tweenjs.d.ts" />
+    <Content Include="Scripts\typings\underscore-int.d.ts" />
+    <Content Include="Scripts\typings\underscore.d.ts" />
+    <Content Include="Scripts\typings\webgl.d.ts" />
+    <Content Include="Scripts\typings\xlib.d.ts" />
+    <TypeScriptCompile Include="tools\Point.ts" />
+    <TypeScriptCompile Include="tools\KeyPoll.ts" />
+    <Content Include="tools\KeyPoll.js">
+      <DependentUpon>KeyPoll.ts</DependentUpon>
+    </Content>
+    <Content Include="tools\KeyPoll.min.js">
+      <DependentUpon>KeyPoll.ts</DependentUpon>
+    </Content>
+    <Content Include="tools\Point.js">
+      <DependentUpon>Point.ts</DependentUpon>
+    </Content>
+    <Content Include="tools\Point.min.js">
+      <DependentUpon>Point.ts</DependentUpon>
+    </Content>
+    <Content Include="tools\Tickprovider.min.js">
+      <DependentUpon>Tickprovider.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="tools\IWindow.ts" />
+    <Content Include="tools\IWindow.js">
+      <DependentUpon>IWindow.ts</DependentUpon>
+    </Content>
+    <Content Include="tools\IWindow.min.js">
+      <DependentUpon>IWindow.ts</DependentUpon>
+    </Content>
+    <Content Include="tools\Signal.js">
+      <DependentUpon>Signal.ts</DependentUpon>
+    </Content>
+    <Content Include="tools\Signal.min.js">
+      <DependentUpon>Signal.ts</DependentUpon>
+    </Content>
+    <Content Include="tools\Signal.ts" />
+    <Content Include="tools\SignalBinding.js">
+      <DependentUpon>SignalBinding.ts</DependentUpon>
+    </Content>
+    <Content Include="tools\SignalBinding.min.js">
+      <DependentUpon>SignalBinding.ts</DependentUpon>
+    </Content>
+    <Content Include="tools\SignalBinding.ts" />
+    <Content Include="tools\Tickprovider.js">
+      <DependentUpon>Tickprovider.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="tools\Tickprovider.ts" />
+    <TypeScriptCompile Include="tools\Dictionary.ts" />
+    <Content Include="tools\Dictionary.js">
+      <DependentUpon>Dictionary.ts</DependentUpon>
+    </Content>
+    <Content Include="tools\Dictionary.min.js">
+      <DependentUpon>Dictionary.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tools\Dictionary.js.map">
+      <DependentUpon>Dictionary.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="core\Entity.js.map">
+      <DependentUpon>Entity.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="core\Node.js.map">
+      <DependentUpon>Node.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="core\NodeList.js.map">
+      <DependentUpon>NodeList.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="core\EntityList.js.map">
+      <DependentUpon>EntityList.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="core\IFamily.js.map">
+      <DependentUpon>IFamily.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="core\NodePool.js.map">
+      <DependentUpon>NodePool.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="core\ComponentMatchingFamily.js.map">
+      <DependentUpon>ComponentMatchingFamily.ts</DependentUpon>
+    </Content>
+    <Content Include="core\SystemList.js.map">
+      <DependentUpon>SystemList.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="core\System.js.map">
+      <DependentUpon>System.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="core\Engine.js.map">
+      <DependentUpon>Engine.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tools\SignalBinding.js.map">
+      <DependentUpon>SignalBinding.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tools\Signal.js.map">
+      <DependentUpon>Signal.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.js.map">
+      <DependentUpon>App.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config" />
+    <Content Include="tools\IWindow.js.map">
+      <DependentUpon>IWindow.ts</DependentUpon>
+    </Content>
+    <Content Include="tools\Tickprovider.js.map">
+      <DependentUpon>Tickprovider.ts</DependentUpon>
+    </Content>
+    <Content Include="tools\Point.js.map">
+      <DependentUpon>Point.ts</DependentUpon>
+    </Content>
+    <Content Include="tools\KeyPoll.js.map">
+      <DependentUpon>KeyPoll.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\display.js.map">
+      <DependentUpon>Display.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\bulletage.js.map">
+      <DependentUpon>BulletAge.ts</DependentUpon>
+    </Content>
+    <Content Include="game\graphics\asteroidview.js.map">
+      <DependentUpon>AsteroidView.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\motioncontrol.js.map">
+      <DependentUpon>MotionControl.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\asteroidcollision.js.map">
+      <DependentUpon>AsteroidCollision.ts</DependentUpon>
+    </Content>
+    <Content Include="game\graphics\spaceshipview.js.map">
+      <DependentUpon>SpaceshipView.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\bulletcollision.js.map">
+      <DependentUpon>BulletCollision.ts</DependentUpon>
+    </Content>
+    <Content Include="game\EntityCreator.js.map">
+      <DependentUpon>EntityCreator.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\position.js.map">
+      <DependentUpon>Position.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\guncontrolsystem.js.map">
+      <DependentUpon>GunControlSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\motion.js.map">
+      <DependentUpon>Motion.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\motioncontrolsystem.js.map">
+      <DependentUpon>MotionControlSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\spaceshipcollision.js.map">
+      <DependentUpon>SpaceshipCollision.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\bullet.js.map">
+      <DependentUpon>Bullet.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\rendersystem.js.map">
+      <DependentUpon>RenderSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\motioncontrols.js.map">
+      <DependentUpon>Motioncontrols.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\bulletagesystem.js.map">
+      <DependentUpon>BulletAgeSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\movement.js.map">
+      <DependentUpon>Movement.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\systempriorities.js.map">
+      <DependentUpon>SystemPriorities.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\gamemanager.js.map">
+      <DependentUpon>GameManager.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\movementsystem.js.map">
+      <DependentUpon>MovementSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\gun.js.map">
+      <DependentUpon>Gun.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\gamestate.js.map">
+      <DependentUpon>Gamestate.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\asteroid.js.map">
+      <DependentUpon>Asteroid.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\guncontrols.js.map">
+      <DependentUpon>Guncontrols.ts</DependentUpon>
+    </Content>
+    <Content Include="game\components\spaceship.js.map">
+      <DependentUpon>Spaceship.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\guncontrol.js.map">
+      <DependentUpon>GunControl.ts</DependentUpon>
+    </Content>
+    <Content Include="game\nodes\render.js.map">
+      <DependentUpon>Render.ts</DependentUpon>
+    </Content>
+    <Content Include="game\systems\collisionsystem.js.map">
+      <DependentUpon>CollisionSystem.ts</DependentUpon>
+    </Content>
+    <Content Include="game\graphics\bulletview.js.map">
+      <DependentUpon>BulletView.ts</DependentUpon>
+    </Content>
+    <Content Include="game\Asteroids.js.map">
+      <DependentUpon>Asteroids.ts</DependentUpon>
+    </Content>
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>AshTS</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50370/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5 --module AMD</TypeScriptTarget>
+    <TypeScriptIncludeComments>true</TypeScriptIncludeComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES5 --module AMD</TypeScriptTarget>
+    <TypeScriptIncludeComments>false</TypeScriptIncludeComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" />
+</Project>

@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScript AshTS</title>
+    <script type="text/javascript" data-main="app"  src="Scripts/libs/require.js"></script>
+    <script>
+        require(['Scripts/libs/domReady!', 'app'], function (doc) {
+            window.CurrentApp = require("app");
+        });
+    </script>
+</head>
+<body>
+    <div id="content"></div>
+</body>
+</html>
